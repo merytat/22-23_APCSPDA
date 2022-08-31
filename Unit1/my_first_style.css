@@ -1,0 +1,17 @@
+h1{
+    background-color: coral;
+}
+body{
+    background-color: aquamarine;
+}
+ul{
+    background-color: burlywood;
+}
+li{
+    background-color: blanchedalmond;
+    color: coral;
+}
+ol{
+    background-color: blueviolet;
+    color: azure;
+}
