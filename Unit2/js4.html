@@ -1,0 +1,50 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+    <script></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<h1 class="display-1">Design a Table
+    <!--<img width="80" src="pisa-tower-icon-cartoon-style-vector-24784031.jpg"  >-->
+</h1>
+<br>
+<table id="this" class="table">
+    <tr>
+        <th>First Header</th>
+        <th>Second Header</th>
+    </tr>
+
+    <tr>
+        <td>Content Here </td>
+        <td>Some more here</td>
+    </tr>
+</table>
+<div >
+    <!--<label class="form-label">What is the Capital of Italy?</label>
+        <br>-->
+    <button onclick="alert('You win!');" class="btn btn-primary btn-lg btn-info">Color me blue</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="colorRed()"
+            class="btn btn-primary btn-lg btn-danger">Color me red</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-primary btn-lg btn-warning">&nbsp;&nbsp;disable&nbsp;&nbsp;</button>
+    <br><br>
+
+</div>
+<script>
+    function colorRed(){
+        document.getElementById("this").className = "table red";
+    }
+</script>
+
+</body>
+</html>
