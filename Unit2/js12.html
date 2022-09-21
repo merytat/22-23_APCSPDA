@@ -1,0 +1,45 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js12.js"></script>
+</head>
+<body>
+<h1>Score Board</h1>
+<button onclick="displayValues()">Display Values</button>
+<button onclick="addPoint()">Add Point</button>
+<p id="name">Full Name: </p>
+<p id="age">Age in days: </p>
+<p id="hours">Hours Played: </p>
+<p id="min">Minutes Played: </p>
+<p id="points">Points: </p>
+<p id="highScore">High Score: </p>
+<p id="position">Expected Position Achieved: </p>
+<script>
+    let firstName = "Mery";
+    let lastName = "Tellez";
+    let age = "17";
+    let points = 10;
+    let minutesPlayed = 3004;
+    let highScore = false;
+    const expectedPosition = 2;
+    let varPosition = "2";
+
+    function displayValues(){
+        document.getElementById("name").innerHTML += " " + firstName + " " + lastName;
+        document.getElementById("age").innerHTML += parseInt(age)*365;
+    }
+
+    /* Full name: displays firstName and LastName
+        Age in days: converts age to days
+        Hours played: calculates hours in minutesPlayed (research how to make it an integer value)
+        Minutes played: calculates the remaining minutes in minutesPlayed after hours played.
+        Points: displays points. Increments by one when Add Point button is pressed.
+        High Score: displays true if points is greater than 8. False otherwise.
+        Expected position achieved: displays true if varPosition is equal to expectedPosition. false otherwise
+        */
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img width="200" onclick="verify()" src="pisa-tower-icon-cartoon-style-vector-24784031.jpg">
+
+<script>
+    function verify(){
+        let isDisplayed = confirm("Can you see the picture?");
+        let newH3 = document.createElement("h3");
+        newH3.innerHTML = "Image loaded: " + isDisplayed;
+        document.body.appendChild(newH3);
+    }
+</script>
+</body>
+</html>

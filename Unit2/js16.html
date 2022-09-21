@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<input type="color" id="colorInput">
+	<input type="checkbox" id="checkInput">
+	<input type="date" id="dateInput">
+	<button onclick="displayInput()">CLick me</button>
+	<p id="result"></p>
+
+</body>
+<script>
+	function displayInput(){
+		let color = document.getElementById("colorInput").value;
+		let check = document.getElementById("checkInput").value;
+		let date = document.getElementById('dateInput').value;
+
+		document.getElementById("result").innerHTML = color + " " + check + " " + date;
+	}
+</script>
+</html>

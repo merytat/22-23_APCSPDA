@@ -1,0 +1,28 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="random01()">Random 0 - 1</button>
+<button onclick="random2Digits()">Random 2 Digits</button>
+
+<script>
+    function random01(){
+        let random = Math.random();
+        let newP = document.createElement("h3");
+        newP.innerHTML = random;
+        document.body.appendChild(newP);
+    }
+
+    function random2Digits(){
+        let twoDigits = Math.floor(Math.random()*(99-10))+10;
+        let newP = document.createElement("h3");
+        newP.innerHTML = twoDigits;
+        document.body.appendChild(newP);
+    }
+</script>
+</body>
+</html>
