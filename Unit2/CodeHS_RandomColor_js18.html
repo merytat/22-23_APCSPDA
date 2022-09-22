@@ -1,0 +1,38 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Type your desired title: </label>
+<input id="title" type="text">
+<input id="color" type="color"><br>
+<button onclick="displayTitle()">Display Title</button>
+<button onclick="selectedColor()">Display on Color</button>
+
+<script>
+    function selectedColor(){
+        let titleVar = document.getElementById("title").value;
+        let newH1 = document.createElement("h1");
+        newH1.innerHTML = titleVar;
+        let colorSelected = document.getElementById("color").value;
+        //alert(colorSelected);
+        newH1.style.color = colorSelected;
+        document.body.appendChild(newH1);
+    }
+
+    function displayTitle(){
+        let titleVar = document.getElementById("title").value;
+        let newH1 = document.createElement("h1");
+        newH1.innerHTML = titleVar;
+        let red = Math.floor(Math.random()* 256);
+        let blue = Math.floor(Math.random()* 256);
+        let green = Math.floor(Math.random()* 256);
+        newH1.style.color = "rgb("+red+","+green+"," + blue +")";
+        document.body.appendChild(newH1);
+    }
+</script>
+</body>
+</html>
