@@ -1,0 +1,33 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<button onclick="countCharacters()">Count Characters</button>
+<button onclick="search()">Search</button>
+
+<script>
+    function countCharacters(){
+        //read from input, count characters and alert characters
+        let enteredText = document.getElementById("text").value;
+        let numberOfCharacters = enteredText.length;
+        alert("There are " + numberOfCharacters + " characters in your text")
+
+    }
+
+    function search(){
+        //read the input, prompt for a search value, search the value
+        //output position
+        let enteredText = document.getElementById("text").value;
+        let searchValue = prompt("Enter the value you want to search: ");
+        let position = enteredText.indexOf(searchValue)
+        alert("Your search value is located at position: "+ position);
+
+    }
+</script>
+</body>
+</html>
