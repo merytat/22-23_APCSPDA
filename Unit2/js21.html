@@ -1,0 +1,44 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Shipping Label Creator</h1>
+<label>Name: </label>
+<input type="text" id="name"><br>
+<label>Last Name: </label>
+<input type="text" id="lName"><br>
+<label>Email: </label>
+<input type="text" id="email"><br>
+<label>Phone: </label>
+<input type="text" id="phone"><br>
+<label>Address: </label>
+<input type="text" id="address"><br>
+<button onclick = "generateLabel()"> Generate Label</button>
+
+<script>
+    function generateLabel(){
+        //read input
+        let name = document.getElementById("name").value;
+        let lName = document.getElementById("lName").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let address = document.getElementById("address").value;
+
+        //outputting to HTML
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = "Mr/Mrs. " + name + " " + lName +
+            "<br> Email: " + email + "<br> Phone: " + phone +
+            "<br> Address: " + address;
+        document.body.appendChild(newDiv);
+
+
+    }
+</script>
+
+
+</body>
+</html>
