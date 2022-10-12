@@ -1,0 +1,39 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User and Password Protected</title>
+</head>
+<body>
+<h1>User and Password Protected</h1>
+<label>Username:</label>
+<input type="text" id="username">
+<label>Password: </label>
+<input type="password" id="pass">
+<button onclick="check()">Enter</button>
+
+<script>
+    const user = "mtellez"
+    const password = "password"
+    function check(){
+        let user1 = document.getElementById("username").value;
+        let pass = document.getElementById("pass").value;
+        if((user1==user) ){
+            if(password == pass){
+                alert("go in");
+            }
+            else{
+                alert("password worn")
+            }
+
+        }
+        else{
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

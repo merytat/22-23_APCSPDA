@@ -1,0 +1,28 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Protected</title>
+</head>
+<body>
+<h1>Password Protected</h1>
+<label>Enter password:</label>
+<input id="pass" type="password">
+<button onclick="checkPass()">Enter</button>
+
+<script>
+    const password = "password";
+    function checkPass(){
+        let enteredPass = document.getElementById("pass").value;
+        if(password == enteredPass){
+            alert("Welcome to the site");
+        }
+        else{
+            alert("Get out!!!");
+        }
+
+    }
+</script>
+</body>
+</html>
