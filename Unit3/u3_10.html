@@ -1,0 +1,31 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repeated table</title>
+</head>
+<body>
+<label>Enter minimum: </label><input id="min">
+<label>Enter maximum: </label><input id="max">
+<table id="table">
+    <tr>
+        <td>Repetition</td>
+        <td>Value of i</td>
+    </tr>
+</table>
+<button onclick="addRows()">Add Rows</button>
+
+<script>
+    function addRows(){
+        let min = parseInt(document.getElementById("min").value);
+        let max = parseInt(document.getElementById("max").value);
+
+        for(var i=min; i<=max; i++){
+            document.getElementById("table").innerHTML += "<tr><td>"+
+                (i+1) + "</td> <td>" + i + "</td></tr>";
+        }
+    }
+</script>
+</body>
+</html>

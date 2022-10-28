@@ -1,0 +1,26 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repeated table</title>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td>Repetition</td>
+        <td>Value of i</td>
+    </tr>
+</table>
+<button onclick="addRows()">Add Rows</button>
+
+<script>
+    function addRows(){
+        for(var i=0; i<20; i++){
+            document.getElementById("table").innerHTML += "<tr><td>"+
+                (i+1) + "</td> <td>" + i + "</td></tr>";
+        }
+    }
+</script>
+</body>
+</html>

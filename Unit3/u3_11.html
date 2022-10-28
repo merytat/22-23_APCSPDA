@@ -1,0 +1,39 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM</title>
+</head>
+<body>
+<label>Type your PIN</label>
+<!--<input type="text" id="pinEntry">-->
+<button onclick="checkPin()">Enter</button>
+<h3 id="message"> </h3>
+
+<script>
+    const PIN = "123456"
+
+    function checkPin(){
+        //read the input
+
+        let attempt = prompt("Enter PIN");
+
+        //Repetition
+        //prompting for input as long as attempt != PIN
+        while(attempt!=PIN)
+        {
+            alert("Wrong Password.  Try again");
+            attempt = prompt("Enter PIN");
+        }
+
+        document.getElementById("message").innerHTML = "Welcome, how much money do you need?"
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
