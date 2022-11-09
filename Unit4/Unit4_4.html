@@ -1,0 +1,42 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Rectangle Data</h1>
+<label>Length:</label><input id="length"><br>
+<label>Width:</label><input id="width"><br>
+<button onclick="analyzeRect()">Analyse Rectangle</button>
+
+<h3 id="result"></h3>
+
+<script>
+    function analyzeRect(){
+        //read input
+        let l = parseFloat(document.getElementById("length").value);
+        let w = parseFloat(document.getElementById("width").value);
+
+        let area = calculateArea(l,w);
+        let perimeter = calculatePerimeter(l,w);
+        document.getElementById("result").innerHTML = "Area: "+ area +
+            "<br> Perimeter: "+ perimeter;
+
+        document.getElementById("result").innerHTML = "Area: "+ calculateArea(l,w) +
+            "<br> Perimeter: " + calculatePerimeter(l,w);
+    }
+
+    function calculateArea(length,width){
+        return length * width;
+    }
+
+    function calculatePerimeter(length, width){
+        return (length+width)*2;
+
+    }
+</script>
+
+</body>
+</html>

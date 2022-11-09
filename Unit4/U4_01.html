@@ -1,0 +1,39 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Place your order</h1>
+
+<button onclick="addItem('Potato Chips')"> Potato Chips</button><br>
+<button onclick="addItem('Pisang Goreng')"> Pisang Goreng</button><br>
+<button onclick="addItem('Nachos')"> Nachos</button><br>
+<h3 id="orderOutput">Your order</h3>
+
+<script>
+    function addItem(food){
+        document.getElementById("orderOutput").innerHTML +=
+            "<br> One order of " + food;
+    }
+
+    function addPotato(){
+        document.getElementById("orderOutput").innerHTML +=
+            "<br> One order of Potato Chips";
+    }
+
+    function addPisang(){
+        document.getElementById("orderOutput").innerHTML +=
+            "<br> One order of Pisang Goreng";
+    }
+
+    function addNachos(){
+        document.getElementById("orderOutput").innerHTML +=
+            "<br> One order of Nachos";
+    }
+
+</script>
+</body>
+</html>

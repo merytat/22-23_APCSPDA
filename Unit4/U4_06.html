@@ -1,0 +1,45 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src=""><br>
+<p>Shoes</p>
+<p id="product1">200</p>
+<img src=""><br>
+<p>Dress</p>
+<p id="product2">300</p>
+<img src=""><br>
+<p>Pants</p>
+<p id="product3">250</p>
+<select onchange="convert(document.getElementById('currency').value)" id="currency">
+    <option value="dollars">Dollars</option>
+    <option value="euros" >Euros</option>
+    <option value="rupias" >Rupias</option>
+    <option value="pounds" >Pounds</option>
+</select>
+
+<script>
+    const dolToEur = 0.9;
+
+    function convert(selected){
+        //let selected = document.getElementById("currency").value;
+        if(selected == "euros"){
+            alert(document.getElementById("product1").innerText)
+            for(let i = 1; i<3; i++){
+                document.getElementById("product"+i).innerHTML =
+                    parseFloat(document.getElementById("product"+i).innerText)*dolToEur;
+
+            }
+
+
+        }
+    }
+</script>
+
+
+</body>
+</html>
