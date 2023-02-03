@@ -1,0 +1,23 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+  <h1>Here's the title</h1>
+    <p>This is one of the paragraphs</p>
+</div>
+
+<p id="div2"></p>
+
+<script>
+    let div1 = document.getElementById("div1")
+    let text = div1.getElementsByTagName("p")[0]
+    document.getElementById("div2").innerText = text.innerText
+    //alert(text)
+</script>
+</body>
+</html>

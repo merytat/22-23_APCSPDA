@@ -1,0 +1,66 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Searching Game</title>
+</head>
+<body>
+<h1>Searching Game</h1>
+<button onclick="generate()">Generate Numbers</button>
+<p id="result"></p>
+<br>
+<label>Enter the number you are looking for:</label>
+<input id="searchValue">
+<button onclick="search()">Search</button>
+<p id="result2"></p>
+
+<script>
+    let list = [];
+
+    function search(){
+        //implement a liner search with a for/while
+
+        //read the input entered by user
+        let searchValue = document.getElementById("searchValue").value;
+        //loop through all elements of list
+
+        //flag
+        let found = false;
+
+        for(let i=0; i<list.length; i++){
+            //compare if the element is equal to the entered number
+            if(list[i] == searchValue){
+                //if found output: Number found at position X
+                document.getElementById("result2").innerHTML =
+                    "Number found at position " + i;
+                found = true;
+                i = list.length; //break;
+
+            }
+        }
+        //after looping if not found output Number not found
+        if(found == false){
+            document.getElementById("result2").innerHTML =
+                "Number not found"
+        }
+
+
+    }
+
+    function generate(){
+        for(let i = 0; i < 10; i++){
+            list.push(Math.floor(Math.random()*50)+1);
+
+            //this works on JS, but not on other languages
+            //list[i] = Math.floor(Math.random()*50)+1;
+        }
+
+        document.getElementById("result").innerHTML = "Numbers generated"
+        console.log(list);
+
+    }
+</script>
+
+</body>
+</html>

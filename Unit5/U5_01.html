@@ -1,0 +1,45 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //declaring an array
+    let names = ["Leo","Mari","Peter"];
+    //refer to one specific element
+    alert(names[1])
+    alert(names)
+
+    //changing values
+    names[1] = names[2];
+    alert(names);
+
+    //access the size or length of array
+    alert(names.length);
+
+    //push function
+    names.push("John","Eve");
+    alert(names);
+    alert(names.length)
+
+    //pop function
+    alert(names.pop());
+    alert(names);
+    alert(names.length);
+
+    //loop through array
+    for(let i = 0; i < names.length; i++){
+        let newH3 = document.createElement("h3");
+        newH3.innerHTML = names[i];
+        document.body.appendChild(newH3);
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>What should we order for dinner</h1>
+<button onclick="addVote(1)">Ice Cream</button>
+<button onclick="addVote(2)">Pizza</button>
+<button onclick="addVote(3)">Soup</button>
+<br>
+<h3 id="l1">0</h3>
+<h3 id="l2">0</h3>
+<h3 id="l3">0</h3>
+<h3 id="result"></h3>
+
+<script>
+    let votesIC = 0;
+    let votesP = 0;
+    let votesS = 0;
+    function addVote(option){
+        //checking what option is
+        //updating the corresponding variable
+        if(option == 1){
+            votesIC++;
+            document.getElementById("l1").innerHTML = votesIC;
+            document.getElementById("l1").style.fontSize = (12+votesIC)+"px";
+        }
+        else if(option == 2){
+            votesP++;
+            document.getElementById("l2").innerHTML = votesP;
+            document.getElementById("l2").style.fontSize = (12+votesP)+"px";
+        }
+        else if(option == 3){
+            votesS++;
+            document.getElementById("l3").innerHTML = votesS;
+            document.getElementById("l3").style.fontSize = (12+votesS)+"px";
+        }
+
+        if(votesIC > votesP && votesIC > votesS){
+            document.getElementById("result").innerHTML = "We are having Ice Cream"
+        }
+        else if(votesP > votesIC && votesP > votesS){
+            document.getElementById("result").innerHTML = "We are having Pizza"
+        }
+        else if(votesS > votesIC && votesS > votesP){
+            document.getElementById("result").innerHTML = "We are having Soup"
+        }
+
+        //updating the h3 (value and size)
+        //choosing the winning order and updating the result
+
+    }
+</script>
+
+</body>
+</html>

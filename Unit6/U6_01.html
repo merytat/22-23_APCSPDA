@@ -1,0 +1,42 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="sayHi()">
+<h1 id="welcome"></h1>
+<input id="name">
+<button onclick="save()">Save name</button>
+
+
+<script>
+    function save(){
+        let name = document.getElementById("name").value;
+        localStorage.setItem("user", name);
+
+        let grades = [87, 94, 67];
+        let js1 = JSON.stringify(grades);
+        localStorage.setItem("grade", js1);
+    }
+
+    function sayHi(){
+       let ls = localStorage.getItem("user");
+       //alert(ls);
+       if(ls != null){
+           document.getElementById("welcome").innerHTML = "Hello " + ls;
+           let grades1 = localStorage.getItem("grade");
+           let grArr = JSON.parse(grades1);
+           alert(grArr);
+       }
+       else{
+           document.getElementById("welcome").innerHTML = "Hello Guest";
+       }
+    }
+
+</script>
+</body>
+
+
+</html>

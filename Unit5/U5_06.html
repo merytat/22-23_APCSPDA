@@ -1,0 +1,57 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="createPage()">
+<div id="buttons">
+
+</div>
+<div id="results">
+    <br>
+
+</div>
+<h3 id="result"></h3>
+<script>
+    function createPage(){
+        for(let i=0; i<meals.length; i++){
+            document.getElementById("buttons").innerHTML +=
+                "<button onclick=addVote(" + i + ")>" + meals[i]
+                + "</button>"
+            document.getElementById("results").innerHTML +=
+                "<h3 id='l"+ i + "'>0</h3>";
+        }
+    }
+
+
+    let meals = ["Pizza","Soup","Salad","Pizza","Soup","Salad"];
+    let votes = [0,0,0,0,0,0];
+
+    function addVote(option) {
+        votes[option]++;
+        document.getElementById("l" + option).innerHTML = votes[option];
+        document.getElementById("l" + option).style.fontSize = (12 + votes[option]) + "px";
+
+        votes.forEach(max);
+        document.getElementById("result").innerHTML = "We are having " + meals[maxIndex];
+    }
+    let maxValue = votes[0];
+    let maxIndex = 0;
+
+    function max(value, index) {
+        if(value > maxValue) {
+            maxValue = value;
+            maxIndex = index;
+        }
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>

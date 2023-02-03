@@ -1,0 +1,39 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="datePicker" type="date">
+<button onclick="displayTime()">What day is today</button>
+<h3>TODAY IS:</h3>
+<h1 id="day"></h1>
+<h3 id="quote"></h3>
+
+<script>
+    function displayTime(){
+
+        //let today = new Date();
+        //alert(document.getElementById("datePicker").value)
+        //2022-11-12
+        //let date = document.getElementById("datePicker");
+        //date.valueAsDate = new Date();
+        let date = new Date(document.getElementById("datePicker").value)
+        let day = date.getDay();
+
+        if(day == 0){
+            document.getElementById("day").innerHTML = "Sunday";
+            document.getElementById("quote").innerHTML = "Funday!"
+        }
+        else if(day == 4){
+            document.getElementById("day").innerHTML = "Thursday";
+            document.getElementById("quote").innerHTML = "Thunday!"
+        }
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coin Flips</title>
+</head>
+<body>
+<h1>Coin Flips</h1>
+<label>How many coin flips do you need? </label>
+<input id="num">
+<br>
+<button onclick="coinFlips()">Simulate</button>
+<h3 id="output"></h3>
+
+<script>
+
+    function coinFlips(){
+        document.getElementById("output").innerHTML = ""
+        let flips = []
+        let num = parseInt(document.getElementById("num").value);
+
+        for(let i=0; i < num; i++){
+            let random = Math.floor(Math.random()*2);
+            if(random == 0){
+                document.getElementById("output").innerHTML += (i+1) + ": Heads <br>";
+            }
+            else{
+                document.getElementById("output").innerHTML += (i+1) + ": Tails <br>";
+            }
+            flips.push(random);
+        }
+
+        summarize(flips);
+        countLongest(flips);
+    }
+
+
+    function countLongest(nums){
+        //counting tails (1)
+        let count = 0;
+        let max = 0;
+        for(let i = 0; i<nums.length; i++){
+            if(nums[i]==1){
+                count++;
+            }
+            else{
+                if(count>max){
+                    max = count;
+                }
+                count = 0;
+            }
+        }
+        if(count>max){
+            max = count;
+        }
+        document.getElementById("output").innerHTML += "<br><br> longest number of tails is :" +max;
+
+    }
+
+    let heads = 0;
+    let tails = 0;
+
+    function summarize(nums){
+        heads = 0;
+        tails = 0;
+        nums.forEach(counter);
+        document.getElementById("output").innerHTML += "<br> Number of heads: " + heads +
+            "<br> Number of tails: " + tails;
+    }
+    function counter(value){
+        if(value == 0){
+            heads++;
+        }
+        else{
+            tails++
+        }
+    }
+</script>
+
+
+</body>
+</html>

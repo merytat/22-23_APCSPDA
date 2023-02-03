@@ -1,0 +1,42 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+<h1>Grade Calculator</h1>
+<label>Enter a grade: </label>
+<input id="grade">
+<br>
+<br>
+<button onclick="addGrade()">Add Grade</button>
+<button onclick="calcAverage()">Calculate Average</button>
+
+<h3 id="listGrades"></h3>
+<h3 id="average"></h3>
+
+<script>
+    let grades = [];
+
+    function addGrade(){
+        grades.push(parseFloat(document.getElementById("grade").value));
+       document.getElementById("grade").value = "";
+        document.getElementById("listGrades").innerHTML = grades;
+    }
+
+    function calcAverage(){
+        let sum = 0;
+
+        for(let i=0; i<grades.length; i++){
+            sum += grades[i];
+        }
+        let average = sum/grades.length;
+        document.getElementById("average").innerHTML = average;
+    }
+
+</script>
+
+</body>
+</html>
