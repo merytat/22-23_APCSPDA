@@ -1,0 +1,33 @@
+<!-- Author: Mery Tellez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="loadTasks()">
+
+<input id="task">
+<button onclick="addTask()">Add Task</button>
+<h3 id="taskList"></h3>
+
+<script>
+    let tasks = [];
+    function loadTasks(){
+        //retrieve the data from localStorage
+    }
+
+    function addTask(){
+        //save the data on localStorage
+        tasks.push(document.getElementById("task").value);
+        let jtask = JSON.stringify(tasks);
+        localStorage.setItem("tasks", tasks);
+        document.getElementById("taskList").innerHTML + "";
+        for(let i= 0; i<tasks.length; i++){
+            document.getElementById("taskList").innerHTML += tasks[i] + "<br>";
+        }
+    }
+</script>
+
+</body>
+</html>
